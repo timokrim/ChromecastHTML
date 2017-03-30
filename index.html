@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cast Videos</title>
+    <link rel="icon" type="image/png" href="imagefiles/metropolia_favicon.png" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href='//fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic-ext,greek-ext,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+    <script src="CastVideos.js"></script>
+
+</head>
+<body>
+    <div id="top_header">
+        <div id="orangeheader"></div>
+        <img src="imagefiles/mediadaysoft_logo.png" id="logo"/>
+    </div>
+    <div class="tab">
+        <button class="tablinks" onclick="openYear(event, '2016')">2016</button>
+        <button class="tablinks" onclick="openYear(event, '2017')">2017</button>
+    </div>
+    <div id="2016" class="tabcontent">
+        <div id="main_video">
+            <div class="imageSub"> <!-- Put Your Image Width -->
+                <div class="blackbg" id="playerstatebg">IDLE</div>
+                <div class=label id="playerstate">IDLE</div>
+                <img src="https://flash.metropolia.fi/streams/thumbs/1493_s.jpg" id="video_image">
+                <div id="video_image_overlay"></div>
+                <video id="video_element">
+                </video>
+            </div>
+
+            <div id="media_control">
+                <div id="play"></div>
+                <div id="pause"></div>
+                <div id="progress_bg"></div>
+                <div id="progress"></div>
+                <div id="progress_indicator"></div>
+                <div id="fullscreen_expand"></div>
+                <div id="fullscreen_collapse"></div>
+                <button is="google-cast-button" id="castbutton"></button>
+                <div id="audio_bg"></div>
+                <div id="audio_bg_track"></div>
+                <div id="audio_indicator"></div>
+                <div id="audio_bg_level"></div>
+                <div id="audio_on"></div>
+                <div id="audio_off"></div>
+                <div id="duration">00:00:00</div>
+            </div>
+        </div>
+        <div id="media_info">
+            <div id="media_title">
+            </div>
+            <div id="media_subtitle">
+            </div>
+            <div id="media_desc">
+            </div>
+        </div>
+
+        <div id="carousel">
+            <!-- embedded twitter widget -->
+            <div id="tweets">
+            <a class="twitter-timeline"  href="https://twitter.com/hashtag/mediasoftday" data-widget-id="847360542872190976">#mediasoftday twiitit</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+        </div>
+    </div>
+    <div id="2017" class="tabcontent">
+        <div id="main_video">
+            <div class="imageSub"> <!-- Put Your Image Width -->
+                <div class="blackbg" id="playerstatebg">IDLE</div>
+                <div class=label id="playerstate">IDLE</div>
+                <img src="imagefiles/mediadaysoft_comingsoon_logo.png" id="video_image">
+                <div id="video_image_overlay"></div>
+                <video id="video_element">
+                </video>
+            </div>
+
+            <div id="media_control">
+                <div id="play"></div>
+                <div id="pause"></div>
+                <div id="progress_bg"></div>
+                <div id="progress"></div>
+                <div id="progress_indicator"></div>
+                <div id="fullscreen_expand"></div>
+                <div id="fullscreen_collapse"></div>
+                <button is="google-cast-button" id="castbutton"></button>
+                <div id="audio_bg"></div>
+                <div id="audio_bg_track"></div>
+                <div id="audio_indicator"></div>
+                <div id="audio_bg_level"></div>
+                <div id="audio_on"></div>
+                <div id="audio_off"></div>
+                <div id="duration">00:00:00</div>
+            </div>
+        </div>
+        <div id="media_info">
+            <div id="media_title">
+            </div>
+            <div id="media_subtitle">
+            </div>
+            <div id="media_desc">
+            </div>
+        </div>
+
+        <div id="carousel">
+            <!-- embedded twitter widget -->
+            <div id="tweets">
+            <a class="twitter-timeline"  href="https://twitter.com/hashtag/mediasoftday" data-widget-id="847360542872190976">#mediasoftday twiitit</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="copyright">&copy; 2017 Team 5</div>
+        <div id="footer_content">Visit the <a id="footer_content_link" href="https://developers.google.com/cast/">Google Cast Developer Site</a></div>
+    </div>
+
+    <script src="CastVideos.js"></script>
+    <script type="text/javascript">
+        var castPlayer = new CastPlayer();
+        window['__onGCastApiAvailable'] = function(isAvailable) {
+            if (isAvailable) {
+                castPlayer.initializeCastPlayer();
+            }
+        };
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+</body>
+</html>
